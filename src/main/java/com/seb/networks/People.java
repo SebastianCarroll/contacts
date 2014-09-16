@@ -57,4 +57,9 @@ public class People {
                 + "]";
     }
 
+	public String getPersonDetails(String contactName) {
+		int index = people.indexOf(contactName);
+		Person person = people.get(index);
+		return person.toString();
+	}
 }

@@ -59,6 +59,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return getGivenName() + " " + getSurname();
+        return getGivenName() + " " + getSurname() + " " + comments.toString(); 
     }
 }

@@ -1,6 +1,5 @@
 package com.seb.networks;
 
-
 public class UserInterfaceManager {
 
 	public UserInterfaceManager() {
@@ -23,6 +22,10 @@ public class UserInterfaceManager {
 				CLI.write("Filename: ");
 				String filename = CLI.readInput();
 				people.importFile(filename);
+			} else if (input.equals("details")){
+				CLI.write("Contact: ");
+				String contactName = CLI.readInput();
+				System.out.println(people.getPersonDetails(contactName));
 			}
 		}
 	}
