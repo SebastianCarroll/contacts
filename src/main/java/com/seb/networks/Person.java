@@ -18,7 +18,7 @@ public class Person {
         this.comments.add(comment);
     }
     
-    public List<String> readComments() {
+    public List<String> getComments() {
         return comments;
     }
 
