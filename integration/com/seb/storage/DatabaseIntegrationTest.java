@@ -16,14 +16,15 @@ public class DatabaseIntegrationTest {
 	@Before
 	public void setup() throws IOException{
 		String path = "install";
-		ProcessBuilder pb = new ProcessBuilder("ls");
-//		Map<String, String> env = pb.environment();
-//		env.put("VAR1", "myValue");
-//		env.remove("OTHERVAR");
-//		env.put("VAR2", env.get("VAR1") + "suffix");
-		//runCommand("ls install");
+		ProcessBuilder pb = new ProcessBuilder("./install.sh");
 		pb.directory(new File(path));
 		Process p = pb.start();
+		String s = null;
+		BufferedReader stdInput = new BufferedReader(new
+                InputStreamReader(p.getInputStream()));
+        while ((s = stdInput.readLine()) != null) {
+            System.out.println(s);
+        }
 	}
 	
 	@Test
