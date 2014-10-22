@@ -12,3 +12,6 @@ mysql -u $user $database < ${sql_script_dir}/create_tables.sql
 
 echo "Inserting Data"
 mysql -u $user $database < ${sql_script_dir}/insert_data.sql
+
+echo "Creating Test User"
+mysql -u $user $database < ${sql_script_dir}/create_test_user.sql
